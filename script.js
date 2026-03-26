@@ -68,7 +68,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add fade-in class to elements
 document.querySelectorAll(
-  '.service-card, .feature-card, .testimonial-card, .about-grid, .contact-grid, .section-header'
+  '.service-card, .feature-card, .testimonial-card, .about-grid, .contact-grid, .section-header, .instagram-card'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
