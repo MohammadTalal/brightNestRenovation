@@ -517,7 +517,7 @@ ul { list-style: none; }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -792,6 +792,7 @@ ul { list-style: none; }
 }
 
 .contact-link:hover { color: var(--accent-dark); }
+.contact-link-sm { font-size: 0.95rem; }
 
 /* Contact Form */
 .contact-form-wrapper {
@@ -959,7 +960,7 @@ ul { list-style: none; }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
-  .services-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
