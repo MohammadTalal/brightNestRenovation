@@ -390,13 +390,8 @@
             </div>
           </div>
           <p>Check out our latest kitchen renovations, bathroom makeovers, painting projects, and more. We share real results from real Hamilton homes.</p>
-          <div class="instagram-preview">
-            <div class="insta-tile"><i class="fas fa-paint-roller"></i><span>Painting Projects</span></div>
-            <div class="insta-tile"><i class="fas fa-sink"></i><span>Kitchen Renos</span></div>
-            <div class="insta-tile"><i class="fas fa-bath"></i><span>Bathroom Renos</span></div>
-            <div class="insta-tile"><i class="fas fa-hammer"></i><span>Construction</span></div>
-            <div class="insta-tile"><i class="fas fa-home"></i><span>Before & After</span></div>
-            <div class="insta-tile"><i class="fas fa-tools"></i><span>Behind the Scenes</span></div>
+          <div class="instagram-feed">
+            <behold-widget feed-id="LmOWe7QI9mXkRydp3IJ1"></behold-widget>
           </div>
           <a href="https://www.instagram.com/brightnestrenovation_" target="_blank" rel="noopener noreferrer" class="btn btn-instagram btn-lg btn-full">
             <i class="fab fa-instagram"></i> Follow Us on Instagram
@@ -557,6 +552,18 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
+
+  <!-- Behold Instagram feed widget -->
+  <script>
+    (() => {
+      if (window.__bhldScript) return;
+      window.__bhldScript = true;
+      const d = document, s = d.createElement("script");
+      s.type = "module";
+      s.src = "https://w.behold.so/widget.js";
+      setTimeout(() => { d.head.append(s); }, 0);
+    })();
+  </script>
 
   <script src="script.js"></script>
 </body>

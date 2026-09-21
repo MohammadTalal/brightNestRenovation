@@ -1093,6 +1093,10 @@ ul { list-style: none; }
   margin-bottom: 28px;
 }
 
+.instagram-feed {
+  margin-bottom: 28px;
+}
+
 .insta-tile {
   aspect-ratio: 1;
   border-radius: var(--radius);
