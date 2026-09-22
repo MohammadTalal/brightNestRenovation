@@ -806,6 +806,37 @@ ul { list-style: none; }
   margin-bottom: 24px;
 }
 
+.form-botcheck {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.form-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: #FDECEA;
+  border: 1px solid #F5C6C2;
+  color: #A93226;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-error i {
+  font-size: 1.15rem;
+  margin-top: 2px;
+}
+
+.form-error a {
+  color: #A93226;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--gray-800);

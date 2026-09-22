@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BrightNest Renovation">
+  <rect width="64" height="64" rx="14" fill="#1B3A5C"/>
+  <path d="M32 12 L56 31 L48.5 31 L48.5 51 L15.5 51 L15.5 31 L8 31 Z" fill="#C19A5B"/>
+  <rect x="26.5" y="35" width="11" height="11" rx="1.5" fill="#1B3A5C"/>
+</svg>

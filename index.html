@@ -7,6 +7,7 @@
   <meta name="description" content="BrightNest Renovation Inc specializes in high-quality remodeling and building services in Hamilton, Ontario. Framing, drywall, flooring, tile, and painting. Call (289) 659-6558 for a free quote.">
   <meta name="keywords" content="renovation Hamilton, construction Hamilton Ontario, framing, drywall, taping, painting, flooring, tile installation, general remodeling, interior finishing">
   <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -484,6 +485,10 @@
               <label for="message">Your Message *</label>
               <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
             </div>
+            <input type="hidden" name="access_key" value="271ddb80-05b1-4149-9841-2ef1274d8a04">
+            <input type="hidden" name="subject" id="formSubject" value="New enquiry from the BrightNest website">
+            <input type="hidden" name="from_name" value="BrightNest Renovation website">
+            <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off">
             <button type="submit" class="btn btn-primary btn-lg btn-full">
               <i class="fas fa-paper-plane"></i> Send Message
             </button>
@@ -493,6 +498,10 @@
             <h3>Thank You!</h3>
             <p>Your message has been received. We'll get back to you within 24 hours.</p>
             <a href="tel:2896596558" class="btn btn-primary">Or Call Us Now: 289-659-6558</a>
+          </div>
+          <div class="form-error" id="formError" role="alert" style="display:none;">
+            <i class="fas fa-circle-exclamation"></i>
+            <span>Sorry, your message could not be sent. Please call <a href="tel:2896596558">289-659-6558</a> or email <a href="mailto:brightnestrenovation@gmail.com">brightnestrenovation@gmail.com</a>.</span>
           </div>
         </div>
       </div>

@@ -77,8 +77,10 @@ document.querySelectorAll(
 // ===== Contact Form =====
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
+const formSubject = document.getElementById('formSubject');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   // Basic validation
@@ -90,15 +92,38 @@ contactForm.addEventListener('submit', (e) => {
     return;
   }
 
-  // Simulate form submission
+  // Subject line that is useful at a glance in the inbox
+  const service = document.getElementById('service');
+  const serviceLabel = service.options[service.selectedIndex].text;
+  formSubject.value = service.value
+    ? 'New enquiry from ' + name + ' - ' + serviceLabel
+    : 'New enquiry from ' + name;
+
   const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const originalBtn = submitBtn.innerHTML;
   submitBtn.disabled = true;
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  formError.style.display = 'none';
 
-  setTimeout(() => {
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(contactForm)
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Submission failed');
+    }
+
     contactForm.style.display = 'none';
     formSuccess.style.display = 'block';
-  }, 1000);
+  } catch (err) {
+    // Never show the thank-you message unless the send actually succeeded
+    formError.style.display = 'flex';
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtn;
+  }
 });
 
 // ===== Active Navigation Link Highlight =====
